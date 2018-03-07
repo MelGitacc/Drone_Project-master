@@ -2,14 +2,11 @@ package com.example.dronepet;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by Haleema on 26/02/2018.
- */
+
 
 public class FollowMeActivity extends AppCompatActivity {
 

@@ -7,9 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * Created by Haleema on 26/02/2018.
- */
 
 public class VoiceCommandFragment extends Fragment {
 

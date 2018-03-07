@@ -48,6 +48,7 @@ public class ControlActivity extends AppCompatActivity {
             }
         });
 
+        //this button will enable drone to land (this needs coding)
         FloatingActionButton takeOffLand = (FloatingActionButton) findViewById(R.id.FloatingBttnTakeOff);
 
         FloatingActionButton mic = (FloatingActionButton) findViewById(R.id.FloatingBttnMic);

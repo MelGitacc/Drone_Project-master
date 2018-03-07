@@ -8,9 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * Created by Haleema on 26/02/2018.
- */
 
 public class FollowMeFragment extends Fragment {
 

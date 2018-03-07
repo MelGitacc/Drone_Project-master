@@ -10,10 +10,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 
+public class ControlFragment extends Fragment  implements View.OnClickListener {
 
-public class ControlFragment extends Fragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,14 +30,15 @@ public class ControlFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_controls, container, false);
 
-        Button forward = (Button) view.findViewById(R.id.forwardBttn);
-        Button backward = (Button) view.findViewById(R.id.backwardsBttn);
-        Button rotateLeft = (Button) view.findViewById(R.id.rotateLeftBttn);
-        Button rotateright = (Button) view.findViewById(R.id.RotateRightBttn);
-        Button up = (Button) view.findViewById(R.id.upBttn);
-        Button left = (Button) view.findViewById(R.id.leftBttn);
-        Button right = (Button) view.findViewById(R.id.rightBttn);
-        Button down = (Button) view.findViewById(R.id.downBttn);
+        view.findViewById(R.id.forwardBttn).setOnClickListener(this);
+        view.findViewById(R.id.backwardsBttn).setOnClickListener(this);
+        view.findViewById(R.id.rotateLeftBttn).setOnClickListener(this);
+        view.findViewById(R.id.RotateRightBttn).setOnClickListener(this);
+        view.findViewById(R.id.upBttn).setOnClickListener(this);
+        view.findViewById(R.id.leftBttn).setOnClickListener(this);
+        view.findViewById(R.id.rightBttn).setOnClickListener(this);
+        view.findViewById(R.id.downBttn).setOnClickListener(this);
+
 
         return view;
     }
@@ -58,5 +60,46 @@ public class ControlFragment extends Fragment {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+    /*
+      implements onClick listener for the control buttons
+       */
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.forwardBttn:
+                //write the code for the forward button
+                Toast.makeText(getActivity(),"Forward button is clicked", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.backwardsBttn:
+                //write the code for the backward button
+                Toast.makeText(getActivity(),"Backward button is clicked", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.rotateLeftBttn:
+                //write the code for the rotate left button
+                Toast.makeText(getActivity(), "Left Right button is clicked", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.RotateRightBttn:
+                //write the code for the rotate left button
+                Toast.makeText(getActivity(), "Rotate Right button is clicked", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.upBttn:
+                //write the code for the up button
+                Toast.makeText(getActivity(), "Up button is clicked", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.downBttn:
+                //write the code for the down button
+                Toast.makeText(getActivity(), "Down button is clicked", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.leftBttn:
+                //write the code for the left button
+                Toast.makeText(getActivity(), "Left button is clicked", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.rightBttn:
+                //write the code for the right button
+                Toast.makeText(getActivity(), "Right button is clicked", Toast.LENGTH_LONG).show();
+                break;
+
+        }
     }
 }
