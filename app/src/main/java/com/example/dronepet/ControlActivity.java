@@ -22,18 +22,14 @@ public class ControlActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        //calling the define buttons method
-      //  defineButtons();
-
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fragment_container);
 
-        if (fragment == null){
+        if (fragment == null) {
 
             ControlFragment controlFragment = new ControlFragment();
             fm.beginTransaction().add(R.id.fragment_container, controlFragment).commit();
         }
-
 
 
         FloatingActionButton followMe = (FloatingActionButton) findViewById(R.id.FloatingBttnFollowMe);
@@ -43,7 +39,7 @@ public class ControlActivity extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(), "follow me is selected", Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(ControlActivity.this, FollowMeActivity.class);
+                Intent intent = new Intent(ControlActivity.this, MapsActivity.class);
                 startActivity(intent);
             }
         });
@@ -63,47 +59,4 @@ public class ControlActivity extends AppCompatActivity {
             }
         });
     }
-    //defining buttons
-  /*  private void defineButtons() {
-        findViewById(R.id.forwardBttn).setOnClickListener(buttonOnClickListener);
-    }
-    //handling multiple buttons using onClick
-    private View.OnClickListener buttonOnClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            switch(v.getId()){
-
-
-                case R.id.forwardBttn:
-                    Toast.makeText(getApplicationContext(), "forward is selected", Toast.LENGTH_LONG).show();
-                    break;
-                case R.id.backwardsBttn:
-                    Toast.makeText(getApplicationContext(), "backward is selected", Toast.LENGTH_LONG).show();
-
-                    break;
-                case R.id.rotateLeftBttn:
-                    Toast.makeText(getApplicationContext(), "rotate left is selected", Toast.LENGTH_LONG).show();
-                    break;
-                case R.id.RotateRightBttn:
-                    Toast.makeText(getApplicationContext(), "rotate right is selected", Toast.LENGTH_LONG).show();
-                    break;
-                case R.id.upBttn:
-                    Toast.makeText(getApplicationContext(), "up is selected", Toast.LENGTH_LONG).show();
-
-                    break;
-                case R.id.downBttn:
-                    Toast.makeText(getApplicationContext(), "down is selected", Toast.LENGTH_LONG).show();
-
-                    break;
-                case R.id.leftBttn:
-                    Toast.makeText(getApplicationContext(), "left is selected", Toast.LENGTH_LONG).show();
-
-                    break;
-                case R.id.rightBttn:
-                    Toast.makeText(getApplicationContext(), "right is selected", Toast.LENGTH_LONG).show();
-
-                    break;
-            }
-        }
-    };*/
 }

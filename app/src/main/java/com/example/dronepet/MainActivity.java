@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(), "follow me is selected", Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(MainActivity.this, FollowMeActivity.class);
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(intent);
             }
         });

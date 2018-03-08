@@ -52,6 +52,8 @@
 
         <activity
             android:name=".MapsActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape"
             android:label="@string/title_activity_maps"></activity>
     </application>
 

@@ -6,8 +6,8 @@
 
     <item
         android:id="@+id/camera_icon"
-        android:title="@string/camera"
         android:icon="@drawable/camera"
-        app:showAsAction="ifRoom"/>
+        android:title="@string/camera"
+        app:showAsAction="ifRoom" />
 
 </menu>
